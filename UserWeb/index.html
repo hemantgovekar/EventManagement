@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/ng-grid.js"></script>
+
+    <script src="Scripts/script.js"></script>
+</head>
+<body ng-app="customersApp" ng-controller="customerCtrl">
+
+    <table>
+        <tr>
+            <td> Id</td>
+            <td> Name</td>
+            <td> Password</td>
+        </tr>
+        <tr ng-repeat="cd in customerData">
+            <td>{{cd.UserId}}</td>
+            <td>{{cd.Username}}</td>
+            <td>{{cd.Password}}</td>
+        </tr>
+    </table>
+    <form name="myForm">
+
+
+
+
+        <b> {{action | uppercase}} </b>
+        </br>
+        <span> <b>Customer Details</b></span>
+        <table>
+            <!--<tr>
+                <td>Id </td>
+                <td> <input type="text" ng-model="New.UserId" />*(PLEASE ENTER UNIQUE ID)</td>
+            </tr>-->
+            <tr>
+                <td>Name</td>
+                <td> <input type="text" ng-model="New.Username" /></td>
+            </tr>
+            <tr>
+                <td>Pasword</td>
+                <td> <input type="text" ng-model="New.Password" /></td>
+            </tr>
+            <!--<tr>
+                <td>Address</td>
+                <td> <input type="text" ng-model="New.address" /></td>
+            </tr>
+            <tr>
+                <td>Contact No</td>
+                <td> <input type="text" ng-model="New.contactNo" /></td>
+            </tr>
+            <tr>
+                <td>Email-Id</td>
+                <td> <input type="text" ng-model="New.emailId" /></td>
+            </tr>-->
+
+        </table>
+        <input id="Submit1" ng-click="update()" type="submit" value="submit" />
+    </form>
+    {{New | json}}
+</body>
+</html>
