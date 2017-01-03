@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\bootstrap.css" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\ng-grid.js" />
     <Content Include="Scripts\script.js" />

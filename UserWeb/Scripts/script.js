@@ -10,9 +10,8 @@ var url = 'http://localhost:24861/api/values';
 //});
 customersApp.factory('customerRepository', function ($http) {
     return {
-        getCustomers: function (callback) {
-           // alert(callback);
-            $http.get(url).success(callback);
+        getCustomers: function (callback) {             
+            $http.get(url).success(callback);            
         }
         ,
         //method for insert
@@ -41,13 +40,11 @@ customersApp.controller('customerCtrl', function ($scope, customerRepository) {
     getCustomers();
     function getCustomers() {
         customerRepository.getCustomers(function (results) {
-            $scope.customerData = results;
-            
+            $scope.customerData = results;                      
         })
     }
     $scope.update = function () {
-        customerRepository.insertUser(function () {
-            alert('customer inserted successfully');
+        customerRepository.insertUser(function () {          
             getCustomers();
         }, $scope.New)
     };

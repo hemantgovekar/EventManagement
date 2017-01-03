@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
-<html>
 <head>
     <title></title>
     <meta charset="utf-8" />
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/jquery-1.9.1.js"></script>
     <script src="Scripts/ng-grid.js"></script>
-
+    <link href="Scripts/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/script.js"></script>
 </head>
-<body ng-app="customersApp" ng-controller="customerCtrl">
+<body ng-app="customersApp" ng-controller="customerCtrl" class="container">
 
-    <table>
+
+
+    <table class="table table-bordered table-striped">
         <tr>
             <td> Id</td>
             <td> Name</td>
@@ -24,21 +25,18 @@
         </tr>
     </table>
     <form name="myForm">
+        {{loading }}
 
-
-
-
-        <b> {{action | uppercase}} </b>
-        </br>
+        <br />
         <span> <b>Customer Details</b></span>
-        <table>
+        <table class="table table-bordered table-striped">
             <!--<tr>
                 <td>Id </td>
                 <td> <input type="text" ng-model="New.UserId" />*(PLEASE ENTER UNIQUE ID)</td>
             </tr>-->
             <tr>
                 <td>Name</td>
-                <td> <input type="text" ng-model="New.Username" /></td>
+                <td> <input type="text" class="text-capitalize" ng-model="New.Username" /></td>
             </tr>
             <tr>
                 <td>Pasword</td>
@@ -58,7 +56,7 @@
             </tr>-->
 
         </table>
-        <input id="Submit1" ng-click="update()" type="submit" value="submit" />
+        <input id="Submit1" class="btn btn-info" ng-click="update()" type="submit" value="submit" />
     </form>
     {{New | json}}
 </body>
